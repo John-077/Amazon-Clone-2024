@@ -1,24 +1,22 @@
-// import React from 'react'
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import Signin from './pages/Auth/Signup'
-// import Payment from './pages/Payment/Payment'
-// import Orders from './pages/Orders/Orders'
-// import Cart from './pages/Cart/Cart'
-// import Results from './pages/Results/Results'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Signup from "./pages/Auth/Signup";
+import Payment from './pages/Payment/Payment'
+import Cart from './pages/Cart/Cart'
+import Results from './pages/Results/Results'
+import Orders from "./pages/Orders/Orders";
+import Linding from "./pages/Linding";
+function Routering() {
+  return (
+    <Routes>
+      <Route path="/" element={<Linding />} />
+      <Route path="/payment" element={<Payment />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/orders" element={<Orders />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/Results" element={<Results />} />
+    </Routes>
+  );
+}
 
-// function Routering() {
-//   return (
-//     <Router>
-//       <Routes>
-//         {/* <Route path="/" element={<App />} /> */}
-//         <Route path="/auth" element={<Signin />} />
-//         <Route path="/payments" element={<Payment />} />
-//         <Route path="/orders" element={<Orders />} />
-//         <Route path='/category/:categoryName' element={<Results/>} />
-//         <Route path="/cart" element={<Cart />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default Routering
+export default Routering
