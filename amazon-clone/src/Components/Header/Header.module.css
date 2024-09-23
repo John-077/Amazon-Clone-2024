@@ -143,12 +143,12 @@
   gap: 2px;
   align-items: center;
 }
-
+/* 
 .lower__container .shop {
     display: flex;
     justify-content: flex-end;
     margin-left: 510px;
-}
+} */
 
 
 @media screen and (max-width: 576px){

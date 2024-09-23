@@ -9,7 +9,7 @@ export const categoryInfos = [
     title: "Discover fashion trends",
     name: "wome's clothing",
     imgLink:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvBQLVihSmDj7k-G3gkPwvXGhOhOHy_P0pfw&s",
+      "https://assets.ajio.com/medias/sys_master/root/20230808/LYRE/64d14ea9eebac147fcb0c928/-473Wx593H-466431240-black-MODEL.jpg",
   },
   {
     title: "Men's Clothing",

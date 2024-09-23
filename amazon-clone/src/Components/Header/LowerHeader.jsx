@@ -14,7 +14,7 @@ function LowerHeader() {
         <li>Registry</li>
         <li>Gift Cards</li>
         <li>Sell</li>
-        <li className={classes.shop}> Shop the Gaming Store</li>
+        {/* <li className={classes.shop}> Shop the Gaming Store</li> */}
       </ul>
     </div>
   );
