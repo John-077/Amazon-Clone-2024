@@ -1,18 +1,20 @@
 import React from 'react'
 import classes from "./Category.module.css";
-import { Link } from '@mui/material';
+import { Link } from "react-router-dom";
 function CategoryCard({data}) {
+  // console.log(data);
+  
   return (
     <div className={classes.category}>
       <Link to={`/category/${data.name}`}>
         <span>
-            <h3>{data.title}</h3>
+          <h3>{data?.title}</h3>
         </span>
-        <img src={data.imgLink} alt="" />
+        <img src={data?.imgLink} alt="" />
         <p>Shop now</p>
       </Link>
     </div>
-  )
+  );
 }
 
 export default CategoryCard
