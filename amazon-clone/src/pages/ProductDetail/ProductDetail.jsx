@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../Components/Product/ProductCard";
 import Loader from "../../Components/Loader/Loader";
-import LayOut from '../../Components/LayOut/LayOut'
+import LayOut from "../../Components/LayOut/LayOut";
 function ProductDetail() {
   const [producting, setproduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +18,6 @@ function ProductDetail() {
         setproduct(res.data);
         setIsLoading(false);
         console.log(setIsLoading(false));
-        
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +29,12 @@ function ProductDetail() {
       {isLoading ? (
         <Loader />
       ) : (
-        <ProductCard product={producting} flex={true} renderDesc={true} />
+        <ProductCard
+          product={producting}
+          flex={true}
+          renderDesc={true}
+          renderAdd={true}
+        />
       )}
     </LayOut>
   );
