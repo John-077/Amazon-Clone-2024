@@ -4,6 +4,7 @@ import axios from "axios";
 import ProductCard from "../../Components/Product/ProductCard";
 import Loader from "../../Components/Loader/Loader";
 import classes from '../../Components/Product/Product.module.css'
+import LayOut from '../../Components/LayOut/LayOut'
 function Results() {
   const [results, setResults] = useState([]);
   const {categoryName} = useParams();
@@ -23,6 +24,7 @@ function Results() {
   }, []);
 
   return (
+    <LayOut>
     <section>
       <h1 style={{ padding: "30px" }}>Results</h1>
       <p style={{ padding: "30px" }}> Category / {categoryName}</p>
@@ -38,6 +40,7 @@ function Results() {
       }
      
     </section>
+    </LayOut>
   );
 }
 

@@ -5,10 +5,11 @@ import Payment from "./pages/Payment/Payment";
 import Cart from "./pages/Cart/Cart";
 import Results from "./pages/Results/Results";
 import Orders from "./pages/Orders/Orders";
-import Linding from "./pages/Linding";
+import Linding from "./pages/Linding/Linding";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 function Routering() {
   return (
+                
     <Routes>
       <Route path="/" element={<Linding />} />
       <Route path="/payment" element={<Payment />} />
@@ -18,6 +19,7 @@ function Routering() {
       <Route path="/category/:categoryName" element={<Results />} />
       <Route path="products/:productId" element={<ProductDetail />} />
     </Routes>
+    
   );
 }
 
