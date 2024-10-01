@@ -72,9 +72,10 @@
   /* background-color: darkblue; */
 }
 .search svg {
-  padding: 7px;
+  padding: 5px;
   background: #febd69;
   color: #1a1a1a;
+ margin-bottom: -1px;
 }
 .search svg:hover {
   background-color: #de9434;

@@ -3,17 +3,17 @@ import classes from "./Header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BiSearch } from "react-icons/bi";
 import { BiCart } from "react-icons/bi";
-import LowerHeader from './LowerHeader'
+import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
 import { StateContext } from "../DataProvider/DataProvider";
+import {auth} from '../../Utility/firebase'
 function Header() {
-
-  const [{ basket }, dispatch] = useContext(StateContext);
-  const totalItem = basket?.reduce((amount,item)=> {
-    return item.amount + amount
-  },0)
+  const [{ user, basket }, dispatch] = useContext(StateContext);
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   // console.log(basket);
-  
+
   return (
     <section className={classes.fixed}>
       <section>
@@ -45,7 +45,7 @@ function Header() {
               <option value="">All</option>
             </select>
             <input type="text" />
-            <BiSearch size={25} />
+            <BiSearch size={38} />
           </div>
           {/* other section */}
 
@@ -59,9 +59,20 @@ function Header() {
                 <option value="">EN</option>
               </select>
             </Link>
-            <Link to="/signup">
-              <p>Sign In</p>
-              <span>Account & Lists</span>
+            <Link to={!user && "/login"}>
+              <div>
+                {user ? (
+                  <>
+                    <p>Hello {user?.email?.split("@")[0]} </p>
+                    <span onClick={()=>auth.signOut()}>Sign Out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello, Sign In</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
+              </div>
             </Link>
             {/* orders */}
             <Link to="/orders">
@@ -70,7 +81,7 @@ function Header() {
             </Link>
             {/* cart */}
             <Link to="/cart" className={classes.cart}>
-              <BiCart size={35} />
+              <BiCart size={33} />
               <span>{totalItem}</span>
             </Link>
           </div>
