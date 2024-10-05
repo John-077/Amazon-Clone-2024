@@ -23,7 +23,7 @@ function Results() {
         console.log(err);
         setIsLoading(false);
       });
-  }, []);
+  }, [categoryName]);
 
   return (
     <LayOut>

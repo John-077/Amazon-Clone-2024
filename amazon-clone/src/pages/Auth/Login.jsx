@@ -19,7 +19,7 @@ function Login() {
     signUP: false,
   });
   //  console.log(password, email);
-  const [{ user }, dispatch] = useContext(StateContext);
+  const [ dispatch] = useContext(StateContext);
   const naviget = useNavigate();
   const navStateData = useLocation();
   console.log(navStateData);
@@ -29,7 +29,7 @@ function Login() {
   const authHandler = async (e) => {
     await e.preventDefault();
     console.log(e.target.name);
-    if (e.target.name == "signin") {
+    if (e.target.name === "signin") {
       // firebase auth
       setLoading({ ...loading, signIn: true });
       signInWithEmailAndPassword(auth, email, password)

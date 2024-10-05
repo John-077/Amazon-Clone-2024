@@ -6,8 +6,8 @@ import classes from "./Category.module.css"
 function Category() {
   return (
     <section className={classes.Category__container}>
-      {categoryInfos.map((infos)=> {
-        return <CategoryCard data={infos}/>
+      {categoryInfos?.map((infos)=> {
+        return <CategoryCard key={infos.id} data={infos} />;
       })}
     </section>
   )

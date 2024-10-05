@@ -5,7 +5,7 @@ import { StateContext } from "../../Components/DataProvider/DataProvider";
 import classes from "./Orders.module.css";
 import ProductCard from "../../Components/Product/ProductCard";
 function Orders() {
-  const [{ user }, dispatch] = useContext(StateContext);
+  const [{ user }] = useContext(StateContext);
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -26,14 +26,14 @@ function Orders() {
     } else {
       setOrders([]);
     }
-  }, []);
+  }, [user]);
   return (
     <LayOut>
       <section className={classes.container}>
         <div className={classes.Orders__container}>
           <h2>Your Orders</h2>
           {
-            orders?.length == 0 && (<div style={{padding: "20px"}}>you don't have orders yet.</div>
+            orders?.length === 0 && (<div style={{padding: "20px"}}>you don't have orders yet.</div>
           )}
           {/* ordered items */}
           <div>

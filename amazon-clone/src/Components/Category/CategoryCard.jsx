@@ -6,7 +6,7 @@ function CategoryCard({data}) {
   
   return (
     <div className={classes.category}>
-      <Link to={`/category/${data.name}`}>
+      <Link to={`/category/${data?.name}`}>
         <span>
           <h3>{data?.title}</h3>
         </span>
