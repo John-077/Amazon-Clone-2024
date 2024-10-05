@@ -91,3 +91,17 @@ h1 {
 h1:hover {
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .Footer__container{
+    display: inline-table;
+    text-align: center;
+  }
+ .footer__details h3 {
+  text-align: center;
+  padding: 10PX 0;
+ 
+    
+ }
+
+}

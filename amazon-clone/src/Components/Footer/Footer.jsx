@@ -29,7 +29,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className={Classes.footer__details}>
           <h3>Make Money With Us</h3>
           <ul>
             <li>
@@ -58,7 +58,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="">
+        <div className={Classes.footer__details}>
           <h3>Amazon Payment Products</h3>
           <ul>
             <li>
@@ -77,7 +77,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="">
+        <div className={Classes.footer__details}>
           <h3>Let Us Help You</h3>
           <ul>
             <li>
